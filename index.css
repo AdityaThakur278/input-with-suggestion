@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.parentContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40vh;
+}
+
+.inputBox {
+  width: 50%;
+  height: 30px;
+  padding: 10px;
+  border-radius: 4px;
+  height: 50px;
+}
+
+#suggestion-container {
+  margin-top: 2px;
+  width: 50%;
+}
+
+.list-item {
+  padding: 4px;
+  border: 1px solid silver;
+  border-radius: 4px;
+  width: 100%;
+}
