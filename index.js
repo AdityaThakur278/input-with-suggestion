@@ -16,6 +16,7 @@ const handleFetchSuggestion = debounce(async (search) => {
     const listItem = document.createElement("div");
     listItem.classList.add("list-item");
     listItem.innerHTML = fruit;
+    listItem.setAttribute("data-key", fruit);
     container.appendChild(listItem);
   });
   suggestionContainer.innerHTML = null;
@@ -28,4 +29,14 @@ const handleSearch = (event) => {
   handleFetchSuggestion(value);
 };
 
+const handleSuggestionSelect = (event) => {
+  const { key } = event.target.dataset || {};
+
+  suggestionContainer.innerHTML = null;
+
+  inputElement.value = key;
+};
+
 inputElement.addEventListener("input", handleSearch);
+
+suggestionContainer.addEventListener("click", handleSuggestionSelect)
